@@ -1,0 +1,29 @@
+<div class="header"></div>
+<div class="menu">
+	<ul class="clearfix">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About us</a></li>
+	</ul>
+</div>
+
+<a href="#" (click)="clickEnAlgo(this)">Click en algo</a>
+
+<ul class="task">
+	<li *ngFor="let task of tasks">
+		<div [ngClass]="{'isDone': !task.isDone}" >
+			<h3>{{ task.title }}</h3> <br>
+			<p>{{ task.description | truncate : 100 }}</p>
+		</div>
+	</li>
+</ul>
+
+
+
+<!--<section>
+	<router-outlet></router-outlet>
+</section>-->
+
+<div class="footer">
+
+</div>
+
